@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eternal Reds™ — Red Superfoods Powder | BioTRUST</title>
+  <meta name="description" content="Fill your Polyphenol Gap with 10 clinically-studied superfruits in one delicious daily scoop. Plant-based energy without the crash or added sugar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+      font-size: 15px;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ============================================
+       COLORS — BioTrust Brand + DR Accents
+       ============================================ */
+    :root {
+      --blue: #0A3B60;
+      --blue-dark: #072D4A;
+      --blue-light: #E2F0FF;
+      --blue-medium: #B8D8F8;
+      --green: #21A600;
+      --green-dark: #1B8A00;
+      --green-light: #E6F9E0;
+      --red: #D32F2F;
+      --red-dark: #B71C1C;
+      --red-light: #FFEBEE;
+      --gold: #F9A825;
+      --gold-light: #FFF8E1;
+      --text: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #717171;
+      --border: #E0E0E0;
+      --bg: #F5F8FC;
+      --shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+      --radius: 10px;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+    /* ============================================
+       SECTION 1: RED URGENCY BANNER
+       ============================================ */
+    .urgency-banner {
+      background: var(--red);
+      color: #fff;
+      padding: 10px 16px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .urgency-banner .timer {
+      display: inline-block;
+      background: rgba(0,0,0,0.25);
+      padding: 2px 10px;
+      border-radius: 4px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      margin-left: 6px;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       FREE SHIPPING BAR
+       ============================================ */
+    .shipping-bar {
+      background: var(--green);
+      color: #fff;
+      text-align: center;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ============================================
+       SECTION 2: HERO — OFFER-FIRST (Nectar Style)
+       Split layout: Product gallery left, Offer right
+       [REPLO: This is the primary conversion zone]
+       ============================================ */
+    .hero {
+      background: #fff;
+      padding: 24px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* Product gallery */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .gallery-main {
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--bg);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-main .product-visual {
+      background: linear-gradient(145deg, #8B1A2B 0%, #C62828 40%, #8B1A2B 100%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .gallery-main .product-visual .brand { font-size: 12px; font-weight: 600; opacity: 0.8; letter-spacing: 2px; text-transform: uppercase; }
+    .gallery-main .product-visual .name { font-size: 32px; font-weight: 900; line-height: 1.1; }
+    .gallery-main .product-visual .sub { font-size: 13px; opacity: 0.7; margin-top: 8px; }
+    .gallery-main .product-visual .dev-note { font-size: 11px; opacity: 0.5; margin-top: 16px; border: 1px dashed rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 4px; }
+    .gallery-thumbs {
+      display: flex;
+      gap: 6px;
+    }
+    .gallery-thumb {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: var(--text-light);
+      cursor: pointer;
+    }
+    .gallery-thumb.active { border-color: var(--blue); }
+
+    /* Offer panel (right side) */
+    .offer-panel { }
+    .offer-panel .review-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .review-bar .stars { color: var(--gold); font-size: 16px; letter-spacing: -1px; }
+    .review-bar .rating { font-weight: 700; font-size: 14px; color: var(--text); }
+    .review-bar .count { font-size: 13px; color: var(--text-light); }
+
+    .offer-panel h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+    .offer-panel .offer-headline {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .offer-panel .offer-sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    /* Tier selector in hero */
+    .tier-selector { margin-bottom: 16px; }
+    .tier-option {
+      display: flex;
+      align-items: center;
+      padding: 12px 14px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+      position: relative;
+      background: #fff;
+    }
+    .tier-option:hover { border-color: var(--blue-medium); }
+    .tier-option.selected { border-color: var(--blue); background: var(--blue-light); }
+    .tier-option .radio {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tier-option.selected .radio { border-color: var(--blue); }
+    .tier-option.selected .radio::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+    .tier-option .tier-info { flex: 1; }
+    .tier-option .tier-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .tier-option .tier-detail {
+      font-size: 12px;
+      color: var(--text-light);
+    }
+    .tier-option .tier-price-area {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .tier-option .tier-price {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .tier-option .tier-price .per { font-size: 12px; font-weight: 500; color: var(--text-light); }
+    .tier-option .tier-compare {
+      font-size: 12px;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+    .tier-option .tier-badge {
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      padding: 2px 10px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tier-badge.popular { background: var(--green); color: #fff; }
+    .tier-badge.best { background: var(--gold); color: var(--blue-dark); }
+    .tier-option .save-pct {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-dark);
+      padding: 1px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    /* Subscribe toggle */
+    .subscribe-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: var(--blue-light);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      border: 1px dashed var(--blue-medium);
+    }
+    .subscribe-row .sub-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .sub-toggle {
+      width: 44px;
+      height: 24px;
+      background: var(--border);
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .sub-toggle.active { background: var(--green); }
+    .sub-toggle .knob {
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      transition: left 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .sub-toggle.active .knob { left: 23px; }
+    .subscribe-row .sub-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+    .subscribe-row .sub-save {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green-dark);
+      background: var(--green-light);
+      padding: 2px 10px;
+      border-radius: 8px;
+    }
+
+    /* Add to cart button */
+    .atc-btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: var(--blue);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    .atc-btn:hover { background: var(--blue-dark); }
+    .atc-btn .btn-sub {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+
+    /* Gift stack */
+    .gift-stack {
+      margin-top: 14px;
+      padding: 14px;
+      background: var(--gold-light);
+      border-radius: var(--radius);
+      border: 1px dashed var(--gold);
+    }
+    .gift-stack .gift-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .gift-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      margin-bottom: 4px;
+      color: var(--text-mid);
+    }
+    .gift-item .gi { color: var(--green); font-weight: 800; }
+    .gift-item.locked { opacity: 0.4; }
+    .gift-item.locked .gi { color: var(--text-light); }
+
+    /* Trust row under ATC */
+    .trust-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+    .trust-item .ti { font-size: 14px; }
+
+    /* ============================================
+       BENEFITS BAR (below hero)
+       ============================================ */
+    .benefits-bar {
+      background: var(--blue);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+    .benefits-bar .container {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .bb-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .bb-item .bbi { font-size: 18px; }
+
+    /* ============================================
+       SECTION 3: PROBLEM — "The Polyphenol Gap"
+       Dense, persuasive copy block
+       ============================================ */
+    .problem-section {
+      padding: 48px 0;
+      background: #fff;
+    }
+    .problem-section .section-tag {
+      display: inline-block;
+      background: var(--red-light);
+      color: var(--red);
+      padding: 4px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .problem-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .problem-section .lead {
+      font-size: 15px;
+      color: var(--text-mid);
+      margin-bottom: 24px;
+      line-height: 1.65;
+      max-width: 700px;
+    }
+    .symptom-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .symptom-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--blue-light);
+      border-radius: 8px;
+      border-left: 4px solid var(--red);
+    }
+    .symptom-item .si-icon { font-size: 22px; flex-shrink: 0; }
+    .symptom-item .si-text { font-size: 14px; font-weight: 600; color: var(--blue); }
+    .symptom-item .si-desc { font-size: 12px; color: var(--text-mid); font-weight: 400; margin-top: 2px; }
+
+    .stat-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: var(--blue);
+      border-radius: var(--radius);
+      color: #fff;
+    }
+    .stat-box .stat-num {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .stat-box .stat-detail {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .stat-box .stat-src {
+      font-size: 11px;
+      opacity: 0.5;
+      margin-top: 4px;
+    }
+
+    /* ============================================
+       SECTION 4: SOLUTION — Ingredient Grid
+       ============================================ */
+    .solution-section {
+      padding: 48px 0;
+      background: var(--bg);
+    }
+    .solution-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .solution-section .sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .fruit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .fruit-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .fruit-card .fc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .fc-icon.r { background: var(--red-light); }
+    .fc-icon.p { background: #F3E5F5; }
+    .fc-icon.g { background: var(--green-light); }
+    .fruit-card .fc-name { font-size: 13px; font-weight: 700; color: var(--blue); }
+    .fruit-card .fc-benefit { font-size: 11px; color: var(--text-light); }
+
+    .plus-row {
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+    }
+    .plus-row strong { color: var(--blue); }
+
+    .diff-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .diff-chip {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 8px 14px;
+      background: #fff;
+      border: 2px solid var(--green);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    /* ============================================
+       SECTION 5: COMPARISON TABLE
+       ============================================ */
+    .compare-section {
+      padding: 48px 0;
+      background: #fff;
+    }
+    .compare-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .compare-section .sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .compare-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .compare-table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .compare-table th, .compare-table td {
+      padding: 12px 14px;
+      text-align: center;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .compare-table th.win { background: var(--green); }
+    .compare-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+      color: var(--blue);
+      background: var(--bg);
+    }
+    .compare-table .win-col { background: var(--green-light); font-weight: 700; color: var(--green-dark); }
+    .compare-table .chk { color: var(--green); font-weight: 800; }
+    .compare-table .x { color: var(--red); font-weight: 800; }
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    /* ============================================
+       SECTION 6: HOW IT WORKS
+       ============================================ */
+    .how-section {
+      padding: 48px 0;
+      background: var(--blue-light);
+    }
+    .how-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .how-section .sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .step .step-num {
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .step .step-icon { font-size: 28px; flex-shrink: 0; }
+    .step .step-text h4 { font-size: 15px; font-weight: 700; color: var(--blue); margin-bottom: 2px; }
+    .step .step-text p { font-size: 13px; color: var(--text-mid); }
+
+    /* ============================================
+       SECTION 7: TESTIMONIALS
+       ============================================ */
+    .reviews-section {
+      padding: 48px 0;
+      background: #fff;
+    }
+    .reviews-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .reviews-section .review-summary {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .review-summary .rs-stars { color: var(--gold); font-size: 20px; }
+    .review-summary .rs-text { font-size: 14px; color: var(--text-mid); font-weight: 600; }
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .review-card {
+      padding: 20px;
+      background: var(--bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .review-card .rc-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .rc-top .rc-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rc-top .rc-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .rc-top .rc-name { font-weight: 700; font-size: 14px; color: var(--blue); }
+    .rc-top .rc-verified { font-size: 11px; color: var(--green-dark); font-weight: 600; }
+    .rc-top .rc-stars { color: var(--gold); font-size: 13px; }
+    .review-card .rc-title { font-weight: 700; font-size: 15px; color: var(--blue); margin-bottom: 6px; }
+    .review-card .rc-body { font-size: 13px; color: var(--text-mid); line-height: 1.6; }
+
+    .video-cta-box {
+      margin-top: 20px;
+      padding: 28px;
+      background: var(--blue);
+      border-radius: var(--radius);
+      text-align: center;
+      color: #fff;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-cta-box .play {
+      width: 52px;
+      height: 52px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin: 0 auto 10px;
+    }
+    .video-cta-box p { font-size: 13px; opacity: 0.7; }
+
+    /* ============================================
+       SECTION 8: INGREDIENTS DEEP DIVE
+       ============================================ */
+    .ingredients-section {
+      padding: 48px 0;
+      background: var(--bg);
+    }
+    .ingredients-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .ingredients-section .sub {
+      font-size: 14px;
+      color: var(--text-mid);
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .ing-list { max-width: 650px; margin: 0 auto; }
+    .ing-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+    .ing-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      cursor: pointer;
+      gap: 10px;
+    }
+    .ing-header:hover { background: var(--bg); }
+    .ing-header .ih-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .ing-header .ih-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      background: var(--red-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+    .ing-header h4 { font-size: 14px; font-weight: 700; color: var(--blue); }
+    .ing-header .ih-toggle {
+      font-size: 18px;
+      color: var(--text-light);
+      transition: transform 0.2s;
+    }
+    .ing-body {
+      padding: 0 16px 0 56px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s, padding 0.3s;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .ing-body.open {
+      max-height: 300px;
+      padding: 0 16px 14px 56px;
+    }
+
+    .clean-box {
+      margin-top: 24px;
+      padding: 20px;
+      background: var(--green-light);
+      border: 1px solid var(--green);
+      border-radius: var(--radius);
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .clean-box h3 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .clean-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+    .clean-item {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ============================================
+       SECTION 9: FAQ
+       ============================================ */
+    .faq-section {
+      padding: 48px 0;
+      background: #fff;
+    }
+    .faq-section h2 {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .faq-list { max-width: 650px; margin: 0 auto; }
+    .faq-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--blue);
+      gap: 10px;
+    }
+    .faq-q:hover { background: var(--blue-light); }
+    .faq-q .fq-toggle {
+      font-size: 18px;
+      color: var(--green);
+      transition: transform 0.2s;
+    }
+    .faq-a {
+      padding: 0 16px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s, padding 0.3s;
+      font-size: 13px;
+      color: var(--text-mid);
+      line-height: 1.7;
+    }
+    .faq-a.open {
+      max-height: 500px;
+      padding: 0 16px 14px;
+    }
+
+    /* ============================================
+       SECTION 10: FINAL CTA
+       ============================================ */
+    .final-section {
+      padding: 48px 0;
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+    }
+    .final-section h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+    .final-section .sub { font-size: 15px; opacity: 0.85; margin-bottom: 6px; }
+    .final-section .timer-note {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .final-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      padding: 16px 48px;
+      border-radius: var(--radius);
+      font-size: 17px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .final-btn:hover { background: var(--green-dark); }
+    .final-section .guar { font-size: 12px; opacity: 0.6; margin-top: 12px; }
+
+    /* ============================================
+       STICKY CTA BAR (Mobile)
+       ============================================ */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 10px 16px;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+    .sticky-bar.visible { transform: translateY(0); }
+    .sticky-bar .sb-info .sb-name { font-size: 13px; font-weight: 700; color: var(--blue); }
+    .sticky-bar .sb-info .sb-price { font-size: 12px; color: var(--text-light); }
+    .sticky-bar .sb-btn {
+      background: var(--blue);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: 24px 0 90px;
+      background: #0D1B2A;
+      text-align: center;
+    }
+    .footer p { color: rgba(255,255,255,0.4); font-size: 11px; margin-bottom: 4px; }
+    .footer a { color: rgba(255,255,255,0.6); }
+
+    /* ============================================
+       RESPONSIVE — TABLET+
+       ============================================ */
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .symptom-row { grid-template-columns: repeat(2, 1fr); }
+      .fruit-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps { grid-template-columns: repeat(3, 1fr); }
+      .review-grid { grid-template-columns: repeat(2, 1fr); }
+      .clean-grid { grid-template-columns: repeat(4, 1fr); }
+      .sticky-bar { display: none; }
+      .offer-panel h1 { font-size: 26px; }
+    }
+
+    @media (min-width: 1024px) {
+      body { font-size: 16px; }
+      .hero-grid { gap: 48px; }
+      .offer-panel h1 { font-size: 28px; }
+      .fruit-grid { grid-template-columns: repeat(5, 1fr); }
+      .problem-section h2, .solution-section h2, .compare-section h2,
+      .how-section h2, .reviews-section h2, .ingredients-section h2,
+      .faq-section h2, .final-section h2 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       URGENCY BANNER — RED (Nectar-style)
+       [REPLO: Sticky top. Connect timer to real deadline or session-based evergreen.]
+       ============================================ -->
+  <div class="urgency-banner">
+    Special Offer Ends In <span class="timer" id="timer-top">02:00:00</span>
+    &nbsp;&mdash;&nbsp; Order Now for Guaranteed FREE Gifts
+  </div>
+
+  <!-- FREE SHIPPING BAR -->
+  <div class="shipping-bar">
+    &#x1F69A; FREE Shipping on Every Order &mdash; No Minimum
+  </div>
+
+  <!-- ============================================
+       HERO — OFFER-FIRST (Nectar Style)
+       Product gallery left, offer panel right
+       [REPLO: Primary conversion zone. Connect to Shopify variants & cart.]
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- LEFT: Product Gallery -->
+        <div class="gallery">
+          <div class="gallery-main">
+            <!-- [REPLO: Replace with product image carousel] -->
+            <div class="product-visual">
+              <span class="brand">BIOTRUST</span>
+              <span class="name">Eternal<br>Reds&trade;</span>
+              <span class="sub">Red Superfoods Powder</span>
+              <span class="dev-note">[Replace with product photo]</span>
+            </div>
+          </div>
+          <div class="gallery-thumbs">
+            <div class="gallery-thumb active">Front</div>
+            <div class="gallery-thumb">Back</div>
+            <div class="gallery-thumb">Facts</div>
+            <div class="gallery-thumb">Scoop</div>
+            <div class="gallery-thumb">Mixed</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Offer Panel -->
+        <div class="offer-panel">
+          <div class="review-bar">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="rating">4.5</span>
+            <span class="count">217+ Trusted Reviews</span>
+          </div>
+
+          <h1>Save Over 80% + Free Gifts</h1>
+          <div class="offer-headline">With Today's Subscribe &amp; Save Offer</div>
+          <p class="offer-sub">10 polyphenol-rich superfruits in one delicious scoop. Plant-based energy, heart support &amp; healthy aging &mdash; delivered to your door on your schedule.</p>
+
+          <!-- Tier Selector -->
+          <div class="tier-selector">
+            <div class="tier-option selected" data-tier="3" data-price="11.70" data-total="35.10" data-compare="19.50" data-save="40" onclick="selectTier(this)">
+              <span class="tier-badge popular">Most Popular</span>
+              <div class="radio"></div>
+              <div class="tier-info">
+                <div class="tier-label">3 Bags <span style="font-weight:400;color:var(--text-light)">(90 servings)</span> <span class="save-pct">Save 83%</span></div>
+                <div class="tier-detail">Most customers choose this</div>
+              </div>
+              <div class="tier-price-area">
+                <div class="tier-price">$11.70 <span class="per">/bag</span></div>
+                <div class="tier-compare">$19.50/bag</div>
+              </div>
+            </div>
+
+            <div class="tier-option" data-tier="2" data-price="13.50" data-total="27.00" data-compare="19.50" data-save="31" onclick="selectTier(this)">
+              <div class="radio"></div>
+              <div class="tier-info">
+                <div class="tier-label">2 Bags <span style="font-weight:400;color:var(--text-light)">(60 servings)</span> <span class="save-pct">Save 72%</span></div>
+                <div class="tier-detail">Great starter option</div>
+              </div>
+              <div class="tier-price-area">
+                <div class="tier-price">$13.50 <span class="per">/bag</span></div>
+                <div class="tier-compare">$19.50/bag</div>
+              </div>
+            </div>
+
+            <div class="tier-option" data-tier="1" data-price="15.30" data-total="15.30" data-compare="19.50" data-save="22" onclick="selectTier(this)">
+              <div class="radio"></div>
+              <div class="tier-info">
+                <div class="tier-label">1 Bag <span style="font-weight:400;color:var(--text-light)">(30 servings)</span> <span class="save-pct">Save 68%</span></div>
+                <div class="tier-detail">Try it out</div>
+              </div>
+              <div class="tier-price-area">
+                <div class="tier-price">$15.30 <span class="per">/bag</span></div>
+                <div class="tier-compare">$19.50/bag</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscription info -->
+          <div class="subscribe-row">
+            <div class="sub-left">
+              <span style="font-size:18px;">&#x1F504;</span>
+              <span class="sub-label" id="delivery-label">Subscribe &amp; Save &mdash; Delivered Every 90 Days</span>
+            </div>
+            <span class="sub-save">Cancel Anytime</span>
+          </div>
+
+          <!-- Add to Cart -->
+          <button class="atc-btn" onclick="document.getElementById('hero').scrollIntoView()">
+            Subscribe Now &mdash; $35.10 / every 90 days
+            <span class="btn-sub">60-Day Money-Back Guarantee &bull; Cancel Anytime</span>
+          </button>
+
+          <!-- Gift Stack -->
+          <div class="gift-stack" id="gift-stack">
+            <div class="gift-title">&#127873; Your FREE Gifts</div>
+            <div class="gift-item"><span class="gi">&#10003;</span> FREE Shipping ($8.95 value)</div>
+            <div class="gift-item" id="gift-book"><span class="gi">&#10003;</span> FREE "21 Superfruit Smoothie Recipes" E-Book</div>
+            <div class="gift-item locked" id="gift-shaker"><span class="gi">&#x2014;</span> FREE Shaker Bottle &mdash; <em>unlock with 3 jars</em></div>
+          </div>
+
+          <!-- Trust Row -->
+          <div class="trust-row">
+            <span class="trust-item"><span class="ti">&#x1F6E1;</span> 60-Day Guarantee</span>
+            <span class="trust-item"><span class="ti">&#x1F512;</span> Secure Checkout</span>
+            <span class="trust-item"><span class="ti">&#x1F331;</span> Non-GMO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BENEFITS BAR
+       ============================================ -->
+  <div class="benefits-bar">
+    <div class="container">
+      <span class="bb-item"><span class="bbi">&#x26A1;</span> Plant-Based Energy</span>
+      <span class="bb-item"><span class="bbi">&#x2764;</span> Heart Health</span>
+      <span class="bb-item"><span class="bbi">&#x1F9EC;</span> Healthy Aging</span>
+      <span class="bb-item"><span class="bbi">&#x2728;</span> No Caffeine or Sugar</span>
+      <span class="bb-item"><span class="bbi">&#x1F44D;</span> Great Taste</span>
+    </div>
+  </div>
+
+  <!-- ============================================
+       PROBLEM SECTION — "The Polyphenol Gap"
+       ============================================ -->
+  <section class="problem-section" id="problem">
+    <div class="container">
+      <span class="section-tag">The Hidden Deficiency</span>
+      <h2>Why You're Tired, Foggy, and Aging Faster Than You Should</h2>
+      <p class="lead">Polyphenols are powerful plant compounds your body needs for energy production, heart health, and cellular protection. But modern diets fall dramatically short &mdash; creating a "Polyphenol Gap" that silently accelerates aging and drains your vitality.</p>
+
+      <div class="symptom-row">
+        <div class="symptom-item">
+          <span class="si-icon">&#x26A1;</span>
+          <div>
+            <div class="si-text">Afternoon Energy Crashes</div>
+            <div class="si-desc">Your cells can't produce energy efficiently without enough polyphenols</div>
+          </div>
+        </div>
+        <div class="symptom-item">
+          <span class="si-icon">&#x1F494;</span>
+          <div>
+            <div class="si-text">Cardiovascular Strain</div>
+            <div class="si-desc">Healthy blood flow and circulation require polyphenol support</div>
+          </div>
+        </div>
+        <div class="symptom-item">
+          <span class="si-icon">&#x23F3;</span>
+          <div>
+            <div class="si-text">Visible Aging</div>
+            <div class="si-desc">Free radicals damage cells daily without antioxidant protection</div>
+          </div>
+        </div>
+        <div class="symptom-item">
+          <span class="si-icon">&#x1F9E0;</span>
+          <div>
+            <div class="si-text">Brain Fog &amp; Poor Focus</div>
+            <div class="si-desc">Your brain needs polyphenols for cognitive clarity</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-box">
+        <div class="stat-num">90%</div>
+        <div>
+          <div class="stat-detail">of American adults don't eat enough fruits and vegetables to meet their daily polyphenol needs.</div>
+          <div class="stat-src">Source: CDC National Health and Nutrition Report</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SOLUTION — 10 Superfruits
+       ============================================ -->
+  <section class="solution-section" id="ingredients-overview">
+    <div class="container">
+      <h2>10 Superfruits. One Scoop. Every Day.</h2>
+      <p class="sub">Eternal Reds&trade; packs the polyphenol power of 10 clinically-studied fruits into one naturally-sweetened scoop.</p>
+
+      <div class="fruit-grid">
+        <div class="fruit-card"><div class="fc-icon r">&#x1F341;</div><div><div class="fc-name">Beet</div><div class="fc-benefit">Circulation &amp; nitric oxide</div></div></div>
+        <div class="fruit-card"><div class="fc-icon p">&#x1FAD0;</div><div><div class="fc-name">Blueberry</div><div class="fc-benefit">Brain &amp; antioxidants</div></div></div>
+        <div class="fruit-card"><div class="fc-icon g">&#x1F34F;</div><div><div class="fc-name">Apple</div><div class="fc-benefit">Fiber &amp; quercetin</div></div></div>
+        <div class="fruit-card"><div class="fc-icon r">&#x1F34E;</div><div><div class="fc-name">Pomegranate</div><div class="fc-benefit">Heart &amp; anti-aging</div></div></div>
+        <div class="fruit-card"><div class="fc-icon p">&#x1F347;</div><div><div class="fc-name">Grape</div><div class="fc-benefit">Resveratrol &amp; longevity</div></div></div>
+        <div class="fruit-card"><div class="fc-icon r">&#x1F352;</div><div><div class="fc-name">Cranberry</div><div class="fc-benefit">Immune &amp; urinary health</div></div></div>
+        <div class="fruit-card"><div class="fc-icon p">&#x1FAD0;</div><div><div class="fc-name">Blackberry</div><div class="fc-benefit">Vitamin C &amp; manganese</div></div></div>
+        <div class="fruit-card"><div class="fc-icon p">&#x1FAD0;</div><div><div class="fc-name">Bilberry</div><div class="fc-benefit">Eye health &amp; circulation</div></div></div>
+        <div class="fruit-card"><div class="fc-icon r">&#x1F353;</div><div><div class="fc-name">Raspberry</div><div class="fc-benefit">Metabolism support</div></div></div>
+        <div class="fruit-card"><div class="fc-icon r">&#x1F353;</div><div><div class="fc-name">Strawberry</div><div class="fc-benefit">Skin health &amp; vitamin C</div></div></div>
+      </div>
+
+      <p class="plus-row"><strong>Plus:</strong> Betaine for liver health, Taurine for cellular energy, and Vitamin C for immune defense.</p>
+
+      <div class="diff-row">
+        <span class="diff-chip">&#10003; Zero Caffeine</span>
+        <span class="diff-chip">&#10003; No Added Sugar</span>
+        <span class="diff-chip">&#10003; No Artificial Sweeteners</span>
+        <span class="diff-chip">&#10003; Non-GMO</span>
+        <span class="diff-chip">&#10003; Naturally Sweetened</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COMPARISON TABLE
+       ============================================ -->
+  <section class="compare-section" id="compare">
+    <div class="container">
+      <h2>How Eternal Reds&trade; Stacks Up</h2>
+      <p class="sub">See why thousands are switching to a smarter superfood.</p>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="win">Eternal Reds&trade;</th>
+              <th>AG1</th>
+              <th>Organifi Red</th>
+              <th>Whole Fruit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Price/Serving</td><td class="win-col"><strong>$0.39&ndash;$0.51</strong></td><td>$3.30</td><td>$2.30</td><td>$4.00+</td></tr>
+            <tr><td>Targeted Superfruits</td><td class="win-col"><strong>10 Focused</strong></td><td>83 (diluted)</td><td>11</td><td>Varies</td></tr>
+            <tr><td>Added Sugar</td><td class="win-col"><span class="chk">&#10007;</span> None</td><td><span class="chk">&#10007;</span> None</td><td><span class="chk">&#10007;</span> None</td><td><span class="x">&#10003;</span> Yes</td></tr>
+            <tr><td>Caffeine Free</td><td class="win-col"><span class="chk">&#10003;</span></td><td><span class="chk">&#10003;</span></td><td><span class="x">&#10007;</span></td><td><span class="chk">&#10003;</span></td></tr>
+            <tr><td>Naturally Sweetened</td><td class="win-col"><span class="chk">&#10003;</span></td><td><span class="x">&#10007;</span></td><td><span class="chk">&#10003;</span></td><td>N/A</td></tr>
+            <tr><td>Great Taste</td><td class="win-col"><span class="chk">&#10003;</span> Berry</td><td>Earthy</td><td><span class="chk">&#10003;</span> Berry</td><td>Varies</td></tr>
+            <tr><td>Convenience</td><td class="win-col"><strong>30 sec</strong></td><td>30 sec</td><td>30 sec</td><td>20+ min</td></tr>
+            <tr><td>Money-Back Guarantee</td><td class="win-col"><strong>60 Days</strong></td><td>90 Days</td><td>30 Days</td><td>N/A</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HOW IT WORKS
+       ============================================ -->
+  <section class="how-section" id="how">
+    <div class="container">
+      <h2>Ridiculously Simple. Seriously Effective.</h2>
+      <p class="sub">Getting your daily polyphenols takes less than 30 seconds.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-icon">&#x1F944;</div>
+          <div class="step-text">
+            <h4>Scoop</h4>
+            <p>Add one scoop to 8oz of cold water or your smoothie.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-icon">&#x1F964;</div>
+          <div class="step-text">
+            <h4>Mix</h4>
+            <p>Stir or shake for 10 seconds. No clumps, no grit.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-icon">&#x2728;</div>
+          <div class="step-text">
+            <h4>Enjoy</h4>
+            <p>All-day energy, heart support &amp; healthy aging. No crash.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       [REPLO: Replace with real reviews. Add UGC video.]
+       ============================================ -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <h2>What Customers Are Saying</h2>
+      <div class="review-summary">
+        <span class="rs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>
+        <span class="rs-text">Excellent 4.5 &bull; 217+ Trusted Reviews</span>
+      </div>
+
+      <div class="review-grid">
+        <div class="review-card">
+          <div class="rc-top">
+            <div class="rc-author">
+              <div class="rc-avatar">SM</div>
+              <div><div class="rc-name">Sarah M.</div><div class="rc-verified">&#10003; Verified Buyer</div></div>
+            </div>
+            <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <div class="rc-title">"I finally have energy past 3pm"</div>
+          <div class="rc-body">I've tried greens powders before and they all tasted terrible. Eternal Reds actually tastes great and I noticed a real difference in my energy within the first week. No more afternoon crashes.</div>
+        </div>
+
+        <div class="review-card">
+          <div class="rc-top">
+            <div class="rc-author">
+              <div class="rc-avatar">JR</div>
+              <div><div class="rc-name">James R.</div><div class="rc-verified">&#10003; Verified Buyer</div></div>
+            </div>
+            <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <div class="rc-title">"Way better than AG1 at half the price"</div>
+          <div class="rc-body">I was spending $99/month on AG1 and wasn't sure it was doing anything. Switched to Eternal Reds three months ago. Tastes better, costs less, and I feel just as good.</div>
+        </div>
+
+        <div class="review-card">
+          <div class="rc-top">
+            <div class="rc-author">
+              <div class="rc-avatar">LP</div>
+              <div><div class="rc-name">Linda P.</div><div class="rc-verified">&#10003; Verified Buyer</div></div>
+            </div>
+            <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          </div>
+          <div class="rc-title">"My doctor noticed a difference"</div>
+          <div class="rc-body">At my last checkup my doctor asked what I changed. The only thing different was adding Eternal Reds to my morning routine. I'm a customer for life.</div>
+        </div>
+
+        <div class="review-card">
+          <div class="rc-top">
+            <div class="rc-author">
+              <div class="rc-avatar">MK</div>
+              <div><div class="rc-name">Mike K.</div><div class="rc-verified">&#10003; Verified Buyer</div></div>
+            </div>
+            <span class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <div class="rc-title">"Best tasting superfood powder"</div>
+          <div class="rc-body">I've tried at least 5 different powders. Most taste like dirt. Eternal Reds tastes like a berry smoothie. My kids even ask for it. No added sugar is a huge bonus.</div>
+        </div>
+      </div>
+
+      <div class="video-cta-box">
+        <div class="play">&#9654;</div>
+        <p><strong>Video Testimonials Coming Soon</strong></p>
+        <p>[REPLO: Add 2-3 UGC video testimonials here, 30-60 seconds each]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       INGREDIENTS DEEP DIVE
+       ============================================ -->
+  <section class="ingredients-section" id="ingredients">
+    <div class="container">
+      <h2>What's Inside Every Scoop</h2>
+      <p class="sub">Transparent label. Clinically-studied ingredients. Nothing to hide.</p>
+
+      <div class="ing-list">
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x1F341;</div><h4>Beetroot Powder</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">One of nature's best sources of dietary nitrates, which your body converts to nitric oxide. Supports healthy blood flow, circulation, and exercise performance.</div>
+        </div>
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x1FAD0;</div><h4>Blueberry Extract</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">Among the highest antioxidant levels of any common fruit, thanks to anthocyanins. Studies link regular consumption to improved memory and cognitive function.</div>
+        </div>
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x1F34E;</div><h4>Pomegranate Extract</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">Rich in punicalagins and ellagic acid &mdash; potent antioxidants that support heart health and may help maintain healthy blood pressure.</div>
+        </div>
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x1F347;</div><h4>Grape Seed Extract</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">One of the richest sources of proanthocyanidins. Also contains resveratrol, widely studied for its longevity and anti-aging benefits.</div>
+        </div>
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x1F352;</div><h4>Cranberry + 5 More Superfruits</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">Cranberry for urinary &amp; immune health. Apple for quercetin &amp; fiber. Blackberry &amp; raspberry for vitamin C. Bilberry for eye health. Strawberry for skin-supporting nutrients.</div>
+        </div>
+        <div class="ing-item">
+          <div class="ing-header" onclick="toggleIng(this)">
+            <div class="ih-left"><div class="ih-icon">&#x2B50;</div><h4>Betaine, Taurine &amp; Vitamin C</h4></div>
+            <span class="ih-toggle">+</span>
+          </div>
+          <div class="ing-body">Betaine supports liver health. Taurine is critical for cellular energy &amp; heart function. Vitamin C rounds it out with immune &amp; antioxidant support.</div>
+        </div>
+      </div>
+
+      <div class="clean-box">
+        <h3>What You Won't Find Inside</h3>
+        <div class="clean-grid">
+          <span class="clean-item">&#10007; No Caffeine</span>
+          <span class="clean-item">&#10007; No Added Sugar</span>
+          <span class="clean-item">&#10007; No Artificial Sweeteners</span>
+          <span class="clean-item">&#10007; No GMOs</span>
+          <span class="clean-item">&#10007; No Artificial Colors</span>
+          <span class="clean-item">&#10007; No Fillers</span>
+          <span class="clean-item">&#10007; No Stimulants</span>
+          <span class="clean-item">&#10007; No Proprietary Blends</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FAQ
+       ============================================ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How does Eternal Reds taste?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">Natural Revitalizing Berry flavor that customers say is one of the best-tasting superfood powders they've tried. Naturally sweetened, no artificial sweeteners, no added sugar. Mixes great with water or smoothies.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How is this different from AG1?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">AG1 crams 83 ingredients into one scoop including synthetic vitamins. Eternal Reds focuses on 10 polyphenol-rich superfruits in targeted amounts, plus Betaine, Taurine, and Vitamin C. Better taste, more focused formula, at $0.39&ndash;$0.51/serving vs AG1's $3.30.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Can I take it with other supplements?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">Yes! Made from whole food fruit extracts plus Betaine, Taurine, and Vitamin C. Complements most supplement routines. Check with your healthcare provider if you take medications.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How quickly will I feel results?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">Many customers report noticeable energy within 1&ndash;2 weeks. Deeper benefits like cardiovascular support build with consistent daily use. We recommend at least 30 days, which is why our bundles are such great value.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>What if I don't like it?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">Every order is backed by our <strong>60-Day Money-Back Guarantee</strong> with free returns. Send it back (even if empty) for a full refund. No questions asked.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>How many servings per jar?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a"><strong>30 servings</strong> per jar (one scoop/day). That's a full month. Our 3-jar bundle = 90 days, 6-jar bundle = 180 days at significant savings.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)"><span>Can I cancel my subscription?</span><span class="fq-toggle">+</span></div>
+          <div class="faq-a">Yes, 100%. No contracts, no commitments, no cancellation fees. Modify, pause, or cancel anytime from your account or by contacting support.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA
+       ============================================ -->
+  <section class="final-section" id="final">
+    <div class="container">
+      <h2>Ready to Close Your Polyphenol Gap?</h2>
+      <p class="sub">Join 200+ customers fueling their body with 10 superfruits every day.</p>
+      <p class="timer-note">Special pricing ends in: <span id="timer-bottom">02:00:00</span></p>
+      <a href="#hero" class="final-btn">Subscribe Now &mdash; Save Over 80%</a>
+      <p class="guar">60-Day Money-Back Guarantee &bull; Free Shipping &bull; Cancel Anytime</p>
+    </div>
+  </section>
+
+  <!-- STICKY MOBILE BAR -->
+  <div class="sticky-bar" id="sticky-bar">
+    <div class="sb-info">
+      <div class="sb-name">Eternal Reds&trade;</div>
+      <div class="sb-price">From $11.70/bag &bull; Free Shipping</div>
+    </div>
+    <a href="#hero" class="sb-btn">Subscribe Now</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 BioTRUST Nutrition. All Rights Reserved.</p>
+      <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      <p style="margin-top: 6px;"><a href="#">Privacy Policy</a> &bull; <a href="#">Terms of Service</a> &bull; <a href="#">Contact Us</a></p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script>
+    // ---- COUNTDOWN TIMER ----
+    (function() {
+      var total = 2 * 60 * 60;
+      function tick() {
+        var h = Math.floor(total / 3600);
+        var m = Math.floor((total % 3600) / 60);
+        var s = total % 60;
+        var t = String(h).padStart(2,'0') + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+        var top = document.getElementById('timer-top');
+        var bot = document.getElementById('timer-bottom');
+        if (top) top.textContent = t;
+        if (bot) bot.textContent = t;
+        if (total > 0) { total--; setTimeout(tick, 1000); }
+      }
+      tick();
+    })();
+
+    // ---- TIER SELECTOR ----
+    function selectTier(el) {
+      document.querySelectorAll('.tier-option').forEach(function(t) { t.classList.remove('selected'); });
+      el.classList.add('selected');
+      updateGifts(el.dataset.tier);
+      updateATC();
+      updateDelivery(el.dataset.tier);
+    }
+
+    function updateDelivery(tier) {
+      var days = {1: 30, 2: 60, 3: 90};
+      var label = document.getElementById('delivery-label');
+      label.innerHTML = 'Subscribe &amp; Save &mdash; Delivered Every ' + days[tier] + ' Days';
+    }
+
+    function updateGifts(tier) {
+      var book = document.getElementById('gift-book');
+      var shaker = document.getElementById('gift-shaker');
+      tier = parseInt(tier);
+      if (tier >= 2) {
+        book.classList.remove('locked');
+        book.innerHTML = '<span class="gi">&#10003;</span> FREE "21 Superfruit Smoothie Recipes" E-Book';
+      } else {
+        book.classList.add('locked');
+        book.innerHTML = '<span class="gi">&#x2014;</span> Recipe E-Book &mdash; <em>unlock with 2+ bags</em>';
+      }
+      if (tier >= 3) {
+        shaker.classList.remove('locked');
+        shaker.innerHTML = '<span class="gi">&#10003;</span> FREE Shaker Bottle';
+      } else {
+        shaker.classList.add('locked');
+        shaker.innerHTML = '<span class="gi">&#x2014;</span> FREE Shaker Bottle &mdash; <em>unlock with 3 bags</em>';
+      }
+    }
+
+    function updateATC() {
+      var selected = document.querySelector('.tier-option.selected');
+      if (!selected) return;
+      var total = selected.dataset.total;
+      var tier = parseInt(selected.dataset.tier);
+      var freq = {1: ' / every 30 days', 2: ' / every 60 days', 3: ' / every 90 days'};
+      var btn = document.querySelector('.atc-btn');
+      btn.innerHTML = 'Subscribe Now &mdash; $' + total + freq[tier] + '<span class="btn-sub">60-Day Money-Back Guarantee &bull; Cancel Anytime</span>';
+    }
+
+    // ---- STICKY BAR ----
+    (function() {
+      var bar = document.getElementById('sticky-bar');
+      var hero = document.getElementById('hero');
+      window.addEventListener('scroll', function() {
+        if (hero.getBoundingClientRect().bottom < 0) {
+          bar.classList.add('visible');
+        } else {
+          bar.classList.remove('visible');
+        }
+      });
+    })();
+
+    // ---- FAQ ACCORDION ----
+    function toggleFaq(el) {
+      var answer = el.nextElementSibling;
+      var icon = el.querySelector('.fq-toggle');
+      var isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-a.open').forEach(function(a) {
+        a.classList.remove('open');
+        a.previousElementSibling.querySelector('.fq-toggle').textContent = '+';
+      });
+      if (!isOpen) { answer.classList.add('open'); icon.textContent = '−'; }
+    }
+
+    // ---- INGREDIENT ACCORDION ----
+    function toggleIng(el) {
+      var body = el.nextElementSibling;
+      var icon = el.querySelector('.ih-toggle');
+      var isOpen = body.classList.contains('open');
+      if (isOpen) { body.classList.remove('open'); icon.textContent = '+'; }
+      else { body.classList.add('open'); icon.textContent = '−'; }
+    }
+  </script>
+
+</body>
+</html>
