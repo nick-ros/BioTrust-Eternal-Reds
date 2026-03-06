@@ -124,22 +124,13 @@
       position: relative;
       overflow: hidden;
     }
-    .gallery-main .product-visual {
-      background: linear-gradient(145deg, #8B1A2B 0%, #C62828 40%, #8B1A2B 100%);
+    .gallery-main img {
       width: 100%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+      object-fit: contain;
+      padding: 12px;
     }
-    .gallery-main .product-visual .brand { font-size: 12px; font-weight: 600; opacity: 0.8; letter-spacing: 2px; text-transform: uppercase; }
-    .gallery-main .product-visual .name { font-size: 32px; font-weight: 900; line-height: 1.1; }
-    .gallery-main .product-visual .sub { font-size: 13px; opacity: 0.7; margin-top: 8px; }
-    .gallery-main .product-visual .dev-note { font-size: 11px; opacity: 0.5; margin-top: 16px; border: 1px dashed rgba(255,255,255,0.3); padding: 4px 12px; border-radius: 4px; }
+    .gallery-main img.cover { object-fit: cover; padding: 0; }
     .gallery-thumbs {
       display: flex;
       gap: 6px;
@@ -156,6 +147,13 @@
       font-size: 10px;
       color: var(--text-light);
       cursor: pointer;
+      overflow: hidden;
+      padding: 0;
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .gallery-thumb.active { border-color: var(--blue); }
 
@@ -502,6 +500,37 @@
       font-size: 11px;
       opacity: 0.5;
       margin-top: 4px;
+    }
+
+    /* Section imagery */
+    .section-img {
+      width: 100%;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .section-img img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .section-img img { height: 340px; }
+      .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+      .problem-grid .problem-content { order: 1; }
+      .problem-grid .problem-media { order: 2; }
+    }
+    .solution-hero-img {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .solution-hero-img img {
+      max-width: 600px;
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
     }
 
     /* ============================================
@@ -1059,22 +1088,27 @@
       <div class="hero-grid">
 
         <!-- LEFT: Product Gallery -->
+        <!-- [REPLO: Replace with Shopify product media carousel. Images below are from BioTrust CDN.] -->
         <div class="gallery">
-          <div class="gallery-main">
-            <!-- [REPLO: Replace with product image carousel] -->
-            <div class="product-visual">
-              <span class="brand">BIOTRUST</span>
-              <span class="name">Eternal<br>Reds&trade;</span>
-              <span class="sub">Red Superfoods Powder</span>
-              <span class="dev-note">[Replace with product photo]</span>
-            </div>
+          <div class="gallery-main" id="gallery-main">
+            <img id="gallery-img" src="https://www.biotrust.com/cdn/shop/files/Eternal_Reds.png?v=1762458295" alt="BioTrust Eternal Reds Superfood Powder" />
           </div>
           <div class="gallery-thumbs">
-            <div class="gallery-thumb active">Front</div>
-            <div class="gallery-thumb">Back</div>
-            <div class="gallery-thumb">Facts</div>
-            <div class="gallery-thumb">Scoop</div>
-            <div class="gallery-thumb">Mixed</div>
+            <div class="gallery-thumb active" onclick="switchImage(this, 'https://www.biotrust.com/cdn/shop/files/Eternal_Reds.png?v=1762458295', false)">
+              <img src="https://www.biotrust.com/cdn/shop/files/Eternal_Reds.png?v=1762458295" alt="Product Front" />
+            </div>
+            <div class="gallery-thumb" onclick="switchImage(this, 'https://bio-img.biotrust.com/Shopify/products/EternalReds/LIL/bag-counter-comp.jpg', true)">
+              <img src="https://bio-img.biotrust.com/Shopify/products/EternalReds/LIL/bag-counter-comp.jpg" alt="Product on Counter" />
+            </div>
+            <div class="gallery-thumb" onclick="switchImage(this, 'https://www.biotrust.com/cdn/shop/files/Eternal-Reds-Supplement-Facts.jpg?v=1758575325', true)">
+              <img src="https://www.biotrust.com/cdn/shop/files/Eternal-Reds-Supplement-Facts.jpg?v=1758575325" alt="Supplement Facts" />
+            </div>
+            <div class="gallery-thumb" onclick="switchImage(this, 'https://www.biotrust.com/cdn/shop/files/Eternal_Reds-1.jpg?v=1758575325', true)">
+              <img src="https://www.biotrust.com/cdn/shop/files/Eternal_Reds-1.jpg?v=1758575325" alt="Mixed Drinks" />
+            </div>
+            <div class="gallery-thumb" onclick="switchImage(this, 'https://www.biotrust.com/cdn/shop/files/Eternal_Red-4.jpg?v=1758575325', true)">
+              <img src="https://www.biotrust.com/cdn/shop/files/Eternal_Red-4.jpg?v=1758575325" alt="Beet Juice Glass" />
+            </div>
           </div>
         </div>
 
@@ -1182,6 +1216,8 @@
        ============================================ -->
   <section class="problem-section" id="problem">
     <div class="container">
+      <div class="problem-grid">
+        <div class="problem-content">
       <span class="section-tag">The Hidden Deficiency</span>
       <h2>Why You're Tired, Foggy, and Aging Faster Than You Should</h2>
       <p class="lead">Polyphenols are powerful plant compounds your body needs for energy production, heart health, and cellular protection. But modern diets fall dramatically short &mdash; creating a "Polyphenol Gap" that silently accelerates aging and drains your vitality.</p>
@@ -1224,6 +1260,16 @@
           <div class="stat-src">Source: CDC National Health and Nutrition Report</div>
         </div>
       </div>
+        </div>
+        <div class="problem-media">
+          <div class="section-img">
+            <img src="https://bio-img.biotrust.com/Shopify/products/EternalReds/LIL/woman-exhausted.jpg" alt="Woman feeling tired and drained from polyphenol deficiency" />
+          </div>
+          <div class="section-img" style="margin-bottom:0">
+            <img src="https://bio-img.biotrust.com/Shopify/products/EternalReds/LIL/handful-of-berries.jpg" alt="Handful of polyphenol-rich superberries" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1234,6 +1280,10 @@
     <div class="container">
       <h2>10 Superfruits. One Scoop. Every Day.</h2>
       <p class="sub">Eternal Reds&trade; packs the polyphenol power of 10 clinically-studied fruits into one naturally-sweetened scoop.</p>
+
+      <div class="solution-hero-img">
+        <img src="https://www.biotrust.com/cdn/shop/files/Eternal_Reds-6.jpg?v=1758575325" alt="Eternal Reds powder with fresh superfruits and vegetables" />
+      </div>
 
       <div class="fruit-grid">
         <div class="fruit-card"><div class="fc-icon r">&#x1F341;</div><div><div class="fc-name">Beet</div><div class="fc-benefit">Circulation &amp; nitric oxide</div></div></div>
@@ -1300,6 +1350,9 @@
     <div class="container">
       <h2>Ridiculously Simple. Seriously Effective.</h2>
       <p class="sub">Getting your daily polyphenols takes less than 30 seconds.</p>
+      <div class="solution-hero-img" style="margin-bottom:24px">
+        <img src="https://bio-img.biotrust.com/Shopify/products/EternalReds/LIL/woman-drinking.jpg" alt="Woman enjoying Eternal Reds superfood drink" />
+      </div>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
@@ -1627,6 +1680,16 @@
         a.previousElementSibling.querySelector('.fq-toggle').textContent = '+';
       });
       if (!isOpen) { answer.classList.add('open'); icon.textContent = '−'; }
+    }
+
+    // ---- IMAGE GALLERY ----
+    function switchImage(thumb, src, useCover) {
+      document.querySelectorAll('.gallery-thumb').forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      var img = document.getElementById('gallery-img');
+      img.src = src;
+      img.alt = thumb.querySelector('img').alt;
+      if (useCover) { img.classList.add('cover'); } else { img.classList.remove('cover'); }
     }
 
     // ---- INGREDIENT ACCORDION ----
